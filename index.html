@@ -1,1 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Personal website for Yesol Jeong, including selected work, CV, and contact information."
+    >
+    <title>Yesol Jeong</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="Yesol Jeong home">Yesol Jeong</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#cv">CV</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="intro-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Personal Website</p>
+          <h1 id="intro-title">Yesol Jeong</h1>
+          <p class="lead">
+            I build thoughtful research, projects, and writing at the intersection
+            of technology, design, and learning.
+          </p>
+          <div class="hero-actions" aria-label="Primary links">
+            <a class="button primary" href="assets/cv.pdf">View CV</a>
+            <a class="button secondary" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <figure class="profile">
+          <img
+            src="assets/profile.jpg"
+            alt="Portrait of Yesol Jeong"
+            width="420"
+            height="420"
+            onerror="this.onerror=null; this.src='assets/profile.png';"
+          >
+        </figure>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">A concise introduction</h2>
+        </div>
+        <div class="section-body">
+          <p>
+            Welcome. This site is a simple home for my background, selected work,
+            and current interests. Replace this paragraph with a short biography,
+            research focus, or professional summary.
+          </p>
+          <p>
+            You can use this space to describe what you are studying, building,
+            or exploring now, along with the communities or problems you care about.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">Work</p>
+          <h2 id="work-title">Selected projects</h2>
+        </div>
+        <div class="project-list">
+          <article class="project">
+            <h3>Project One</h3>
+            <p>
+              Briefly describe a project, publication, or case study. Include the
+              problem, your contribution, and the outcome.
+            </p>
+          </article>
+          <article class="project">
+            <h3>Project Two</h3>
+            <p>
+              Highlight another example of your work. Keep this summary short and
+              link to details if you add project pages later.
+            </p>
+          </article>
+          <article class="project">
+            <h3>Project Three</h3>
+            <p>
+              Use this slot for teaching, writing, research, design, engineering,
+              or any other work you want visitors to find quickly.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split" id="cv" aria-labelledby="cv-title">
+        <div class="section-heading">
+          <p class="eyebrow">CV</p>
+          <h2 id="cv-title">Resume and background</h2>
+        </div>
+        <div class="section-body">
+          <p>
+            Download the curriculum vitae as a PDF. The link points to
+            <code>assets/cv.pdf</code> so it will work on GitHub Pages once the
+            file is added to the repository.
+          </p>
+          <a class="button primary" href="assets/cv.pdf">Open CV PDF</a>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div class="section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Connect</h2>
+        </div>
+        <address class="contact-list">
+          <a href="mailto:hello@example.com">hello@example.com</a>
+          <a href="https://github.com/yesol-jeong">GitHub</a>
+          <a href="https://www.linkedin.com/">LinkedIn</a>
+        </address>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; <span id="year">2026</span> Yesol Jeong. Built with static HTML and CSS.</p>
+    </footer>
+  </body>
+</html>
