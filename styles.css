@@ -1,13 +1,16 @@
 :root {
-  --bg: #f8fafc;
+  --bg: #f6f7f9;
   --surface: #ffffff;
-  --text: #1f2428;
-  --muted: #5f6b73;
-  --border: #d7dde2;
-  --accent: #0f6f72;
-  --accent-dark: #0a5154;
-  --accent-soft: #dcefee;
-  --focus: #9b4dca;
+  --surface-strong: #eef5f4;
+  --text: #20242a;
+  --muted: #606b76;
+  --border: #d8dee5;
+  --accent: #0f766e;
+  --accent-dark: #0b4f4a;
+  --accent-soft: #dff3f0;
+  --warm: #b7672d;
+  --blue: #3157a4;
+  --focus: #3157a4;
   --max-width: 1080px;
 }
 
@@ -21,7 +24,9 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg);
+  background:
+    linear-gradient(180deg, rgba(223, 243, 240, 0.9) 0, rgba(246, 247, 249, 0) 360px),
+    var(--bg);
   color: var(--text);
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -70,7 +75,7 @@ button:focus-visible {
   position: sticky;
   top: 0;
   z-index: 5;
-  background: rgba(248, 250, 252, 0.92);
+  background: rgba(246, 247, 249, 0.92);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(12px);
 }
@@ -121,12 +126,12 @@ main {
 }
 
 .hero {
-  min-height: calc(100vh - 72px);
+  min-height: min(820px, calc(100vh - 72px));
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 420px);
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 380px);
   gap: clamp(2rem, 6vw, 5rem);
   align-items: center;
-  padding: clamp(3rem, 8vw, 7rem) 0;
+  padding: clamp(3rem, 8vw, 6rem) 0 clamp(2rem, 5vw, 4rem);
 }
 
 .hero-copy {
@@ -151,7 +156,7 @@ p {
 
 h1 {
   margin: 0;
-  font-size: clamp(3rem, 12vw, 6rem);
+  font-size: clamp(3.3rem, 12vw, 6.5rem);
   line-height: 0.95;
 }
 
@@ -220,13 +225,21 @@ h3 {
 }
 
 .profile img {
-  width: min(100%, 420px);
-  aspect-ratio: 1;
+  width: min(100%, 380px);
+  aspect-ratio: 4 / 5;
   object-fit: cover;
+  object-position: center top;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: var(--accent-soft);
-  box-shadow: 0 24px 60px rgba(31, 36, 40, 0.14);
+  background: var(--surface);
+  box-shadow: 0 24px 60px rgba(32, 36, 42, 0.14);
+}
+
+.profile figcaption {
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
 }
 
 .section {
@@ -242,9 +255,45 @@ h3 {
 }
 
 .section-body p,
-.project p {
+.project p,
+.resume-block p,
+.ai-card p {
   margin: 0 0 1rem;
   color: var(--muted);
+}
+
+.about-layout {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.fact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.fact-grid div,
+.resume-block,
+.ai-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.fact-grid dt {
+  color: var(--warm);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.fact-grid dd {
+  margin: 0.2rem 0 0;
+  color: var(--text);
+  font-weight: 700;
 }
 
 .project-list {
@@ -257,6 +306,71 @@ h3 {
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 1.25rem;
+}
+
+.project:nth-child(2) {
+  border-top: 4px solid var(--warm);
+}
+
+.project:nth-child(3) {
+  border-top: 4px solid var(--blue);
+}
+
+.project:first-child {
+  border-top: 4px solid var(--accent);
+}
+
+.project-type {
+  margin: 0 0 0.45rem;
+  color: var(--accent-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.resume-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.tag-list,
+.course-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tag-list li,
+.course-grid li {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-strong);
+  color: var(--accent-dark);
+  font-weight: 800;
+}
+
+.tag-list li {
+  padding: 0.35rem 0.65rem;
+  font-size: 0.9rem;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.course-grid li {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
 }
 
 .contact-list {
@@ -311,12 +425,17 @@ h3 {
   }
 
   .profile img {
-    width: min(100%, 320px);
+    width: min(100%, 300px);
   }
 
   .section {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  .fact-grid,
+  .course-grid {
+    grid-template-columns: 1fr;
   }
 }
 

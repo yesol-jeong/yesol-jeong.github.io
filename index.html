@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Personal website for Yesol Jeong, including selected work, CV, and contact information."
+      content="Personal website for Yesol Jeong, including an introduction, projects, resume, planned courses, AI usage, and contact links."
     >
-    <title>Yesol Jeong</title>
+    <title>Yesol Jeong | Personal Website</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -18,8 +18,10 @@
         <a class="brand" href="#top" aria-label="Yesol Jeong home">Yesol Jeong</a>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#cv">CV</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#ai-usage">AI Usage</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -28,15 +30,16 @@
     <main id="main">
       <section class="hero" id="top" aria-labelledby="intro-title">
         <div class="hero-copy">
-          <p class="eyebrow">Personal Website</p>
+          <p class="eyebrow">Chemical and Biological Engineering</p>
           <h1 id="intro-title">Yesol Jeong</h1>
           <p class="lead">
-            I build thoughtful research, projects, and writing at the intersection
-            of technology, design, and learning.
+            I am an undergraduate student at Seoul National University interested
+            in bioengineering, biomaterials, microdroplet chemistry, and research
+            that connects chemistry with living systems.
           </p>
           <div class="hero-actions" aria-label="Primary links">
             <a class="button primary" href="assets/cv.pdf">View CV</a>
-            <a class="button secondary" href="#contact">Get in touch</a>
+            <a class="button secondary" href="#projects">See projects</a>
           </div>
         </div>
 
@@ -46,71 +49,147 @@
             alt="Portrait of Yesol Jeong"
             width="420"
             height="420"
-            onerror="this.onerror=null; this.src='assets/profile.png';"
           >
+          <figcaption>Seoul National University, College of Engineering</figcaption>
         </figure>
       </section>
 
       <section class="section" id="about" aria-labelledby="about-title">
         <div class="section-heading">
           <p class="eyebrow">About</p>
-          <h2 id="about-title">A concise introduction</h2>
+          <h2 id="about-title">Introduction</h2>
         </div>
-        <div class="section-body">
+        <div class="section-body about-layout">
           <p>
-            Welcome. This site is a simple home for my background, selected work,
-            and current interests. Replace this paragraph with a short biography,
-            research focus, or professional summary.
+            I am Yesol Jeong, a senior undergraduate student in Chemical and
+            Biological Engineering at Seoul National University. My academic
+            interests center on chemistry, biology, and engineering approaches
+            to biomaterials, metabolism, and regenerative medicine.
           </p>
           <p>
-            You can use this space to describe what you are studying, building,
-            or exploring now, along with the communities or problems you care about.
+            Through research internships, I have worked on secretome-based
+            ischemic wound regeneration and artificial C4 photosynthesis in
+            water microdroplets. I also enjoy using programming and AI tools to
+            organize ideas, analyze data, and communicate research clearly.
           </p>
+          <dl class="fact-grid">
+            <div>
+              <dt>Name</dt>
+              <dd>Yesol Jeong</dd>
+            </div>
+            <div>
+              <dt>Major</dt>
+              <dd>Chemical and Biological Engineering</dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>Bioengineering, biomaterials, and microdroplet chemistry</dd>
+            </div>
+            <div>
+              <dt>Affiliation</dt>
+              <dd>College of Engineering, SNU</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
-      <section class="section" id="work" aria-labelledby="work-title">
+      <section class="section" id="projects" aria-labelledby="projects-title">
         <div class="section-heading">
-          <p class="eyebrow">Work</p>
-          <h2 id="work-title">Selected projects</h2>
+          <p class="eyebrow">Projects</p>
+          <h2 id="projects-title">Selected activities</h2>
         </div>
         <div class="project-list">
           <article class="project">
-            <h3>Project One</h3>
+            <p class="project-type">Research internship</p>
+            <h3>Ischemic Wound Regeneration by scCO2-Dried Secretome</h3>
             <p>
-              Briefly describe a project, publication, or case study. Include the
-              problem, your contribution, and the outcome.
+              Conducted secretome drying experiments with supercritical CO2 and
+              supported in vitro assays such as live-dead, scratch migration,
+              tube formation, and angiogenesis assays.
             </p>
           </article>
           <article class="project">
-            <h3>Project Two</h3>
+            <p class="project-type">Research internship</p>
+            <h3>Artificial C4 Photosynthesis in Water Microdroplets</h3>
             <p>
-              Highlight another example of your work. Keep this summary short and
-              link to details if you add project pages later.
+              Investigated carbon-fixation chemistry in microdroplet environments
+              and gained experience with analytical tools including GC-MS and
+              H-NMR.
             </p>
           </article>
           <article class="project">
-            <h3>Project Three</h3>
+            <p class="project-type">Leadership activity</p>
+            <h3>STEM Student Honor Society</h3>
             <p>
-              Use this slot for teaching, writing, research, design, engineering,
-              or any other work you want visitors to find quickly.
+              Served as Vice President of SNU Tomorrow's Engineering Membership,
+              contributing to academic seminars, public relations, mentoring,
+              volunteer service, and leadership activities.
             </p>
           </article>
         </div>
       </section>
 
-      <section class="section split" id="cv" aria-labelledby="cv-title">
+      <section class="section" id="resume" aria-labelledby="resume-title">
         <div class="section-heading">
           <p class="eyebrow">CV</p>
-          <h2 id="cv-title">Resume and background</h2>
+          <h2 id="resume-title">Resume and background</h2>
         </div>
-        <div class="section-body">
+        <div class="resume-grid">
+          <article class="resume-block">
+            <h3>Education</h3>
+            <p>Seoul National University</p>
+            <p>B.S. in Chemical and Biological Engineering</p>
+          </article>
+          <article class="resume-block">
+            <h3>Skills</h3>
+            <ul class="tag-list">
+              <li>Cell culture</li>
+              <li>In vitro assays</li>
+              <li>GC-MS</li>
+              <li>H-NMR</li>
+              <li>UV-Vis</li>
+              <li>ImageJ</li>
+              <li>GraphPad</li>
+              <li>ChemDraw</li>
+              <li>ASPEN</li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>C++</li>
+            </ul>
+          </article>
+          <article class="resume-block">
+            <h3>Awards &amp; Recognition</h3>
+            <p>Gold Prize, KIChE Workshop (2026).</p>
+            <p>Excellence Award, SNU CES2026 programme team project.</p>
+            <a class="button primary" href="assets/cv.pdf">Open CV PDF</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="courses" aria-labelledby="courses-title">
+        <div class="section-heading">
+          <p class="eyebrow">Courses</p>
+          <h2 id="courses-title">Courses I plan to take</h2>
+        </div>
+        <ul class="course-grid">
+          <li>Data Structures</li>
+          <li>Chemical Process Experiments</li>
+        </ul>
+      </section>
+
+      <section class="section" id="ai-usage" aria-labelledby="ai-title">
+        <div class="section-heading">
+          <p class="eyebrow">AI Usage</p>
+          <h2 id="ai-title">How AI helped</h2>
+        </div>
+        <div class="ai-card">
+          <p><strong>Tool:</strong> Codex</p>
           <p>
-            Download the curriculum vitae as a PDF. The link points to
-            <code>assets/cv.pdf</code> so it will work on GitHub Pages once the
-            file is added to the repository.
+            <strong>Prompt:</strong> Build a static personal website in the repo
+            root. Keep it compatible with GitHub Pages, make it responsive and
+            accessible, and revise the content using my CV, profile photo, SNU
+            email, major, projects, planned courses, and an AI Usage section.
           </p>
-          <a class="button primary" href="assets/cv.pdf">Open CV PDF</a>
         </div>
       </section>
 
@@ -120,15 +199,15 @@
           <h2 id="contact-title">Connect</h2>
         </div>
         <address class="contact-list">
-          <a href="mailto:hello@example.com">hello@example.com</a>
-          <a href="https://github.com/yesol-jeong">GitHub</a>
-          <a href="https://www.linkedin.com/">LinkedIn</a>
+          <a href="mailto:yesorno@snu.ac.kr">yesorno@snu.ac.kr</a>
+          <a href="https://github.com/yesol-jeong">github.com/yesol-jeong</a>
+          <a href="https://yesol-jeong.github.io">yesol-jeong.github.io</a>
         </address>
       </section>
     </main>
 
     <footer class="footer">
-      <p>&copy; <span id="year">2026</span> Yesol Jeong. Built with static HTML and CSS.</p>
+      <p>&copy; 2026 Yesol Jeong. Built with static HTML and CSS for GitHub Pages.</p>
     </footer>
   </body>
 </html>
